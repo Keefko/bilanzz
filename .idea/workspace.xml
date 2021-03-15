@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d33a525-b92d-4981-8dfd-bf570e171c87" name="Default Changelist" comment="" />
+    <list default="true" id="6d33a525-b92d-4981-8dfd-bf570e171c87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +154,6 @@
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
-      <path value="$PROJECT_DIR$/vendor/unisharp/laravel-filemanager" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pk9loyBt5ZwAGPbPOCKmQMGRKY" />
@@ -195,7 +196,7 @@
       <updated>1615716375150</updated>
       <workItem from="1615716376240" duration="10436000" />
       <workItem from="1615746317283" duration="19088000" />
-      <workItem from="1615766386123" duration="1261000" />
+      <workItem from="1615766386123" duration="2298000" />
     </task>
     <servers />
   </component>
@@ -218,6 +219,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="383" y="143" key="#com.intellij.fileTypes.FileTypeChooser/460.1080.1000.444/1920.0.1920.1080/0.0.1280.680@0.0.1280.680" timestamp="1615717451104" />
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615767735434">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="88" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/460.1080.1000.444/1920.0.1920.1080/0.0.1280.680@0.0.1280.680" timestamp="1615767735434" />
     <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615745239616">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
