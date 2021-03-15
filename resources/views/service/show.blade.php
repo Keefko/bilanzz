@@ -4,7 +4,7 @@
 
 @section('content')
     @include('includes/menu')
-    <header id="page-hero" style="background-image:linear-gradient(180deg, rgba(0, 149, 218, 0.8) 70%, rgba(0, 57, 116, 0.8) 100%),url({{$service->img}});
+    <header id="page-hero" style="background-image:linear-gradient(180deg, rgba(0, 149, 218, 0.8) 70%, rgba(0, 57, 116, 0.8) 100%),url({{asset('images/'.$service->img)}});
         background-position: center center; background-size: cover; height: 70vh">
 
         <div class="masthead">
