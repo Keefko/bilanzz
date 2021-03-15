@@ -2,12 +2,12 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
         <img class="sidebar-heading" src="{{asset('images/logobilanz.svg')}}">
         <div class="list-group list-group-flush">
-            <a href="url({{}})" class="list-group-item list-group-item-action">Administrácia</a>
-            <a href="url({{}})" class="list-group-item list-group-item-action">Domovská stránka</a>
-            <a href="url({{}})" class="list-group-item list-group-item-action">Služby</a>
-            <a href="url({{}})" class="list-group-item list-group-item-action">Stránky</a>
-            <a href="url({{}})" class="list-group-item list-group-item-action">Menu</a>
-            <a href="url({{}})" class="list-group-item list-group-item-action">Kontakt</a>
+            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Administrácia</a>
+            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Domovská stránka</a>
+            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Služby</a>
+            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Stránky</a>
+            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Menu</a>
+            <a href="{{url('/administracia/kontakt')}}" class="list-group-item list-group-item-action">Kontakt</a>
         </div>
     </div>
     <div id="page-content-wrapper">
