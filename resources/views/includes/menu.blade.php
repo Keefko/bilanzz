@@ -1,7 +1,7 @@
 @include('dashboard.includes.error')
 <nav class="navbar sticky-top navbar-expand-lg bg-white" id="navbar">
     <div class="container">
-        <img src="{{asset('images/'. $logo->src)}}">
+        <a href="{{url('/')}}"><img src="{{asset('images/'. $logo->src)}}"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="hamburger">
                 <div class="navbar-toggler-inner"></div>

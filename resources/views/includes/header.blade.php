@@ -10,10 +10,10 @@
                 @endif
                 <div class="mt-4">
                     @if($section->button_one_text || $section->button_one_text !=='')
-                        <a href="url({{$section->button_one_url}})" class="btn btn-custom btn-custom-blue">{{$section->button_one_text}}</a>
+                        <a href="{{url($section->button_one_url)}}" class="btn btn-custom btn-custom-blue">{{$section->button_one_text}}</a>
                     @endif
                     @if($section->button_two_text || $section->button_two_text !=='')
-                        <a href="url({{$section->button_two_url}})"  class="btn btn-custom btn-custom-transparent">{{$section->button_two_text}}<img class="p-2" src="{{asset('images/Arrow%201.svg')}}"></a>
+                        <a href="{{url($section->button_two_url)}}"  class="btn btn-custom btn-custom-transparent">{{$section->button_two_text}}<img class="p-2" src="{{asset('images/Arrow%201.svg')}}"></a>
                     @endif
                 </div>
             </div>
