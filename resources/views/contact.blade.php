@@ -5,7 +5,7 @@
 @section('content')
     @include('includes/menu')
     <header id="page-hero" style="background-image:linear-gradient(180deg, rgba(0, 149, 218, 0.8) 70%, rgba(0, 57, 116, 0.8) 100%),url({{asset('images/'.$contact->img)}});
-        background-position: center center; background-size: cover; height: 70vh">
+        background-position: center center; background-size: cover; height: 50vh">
 
         <div class="masthead">
             <h1>{{$contact->title}}</h1>
@@ -17,39 +17,25 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 mx-md-auto">
+                        <div class="col-4 ">
                             <div class="contact-box">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <h3 class="mt-3">Adresa</h3>
                                 <p>{!! $contact->address !!}</p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 mx-md-auto">
+                        <div class="col-4">
                             <div class="contact-box">
                                 <i class="fas fa-phone"></i>
                                 <h3 class="mt-3">Telefón</h3>
                                 <p>{!! $contact->phone !!}</p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 mx-md-auto">
+                        <div class="col-4">
                             <div class="contact-box">
                                 <i class="fas fa-envelope"></i>
                                 <h3 class="mt-3">E-mail</h3>
                                 <p>{!! $contact->mail !!}</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-6 mx-md-auto">
-                            <div class="contact-box">
-                                <i class="fas fa-wallet"></i>
-                                <h3 class="mt-3">Fakturačné údaje</h3>
-                                <p>{!! $contact->info !!}</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mx-md-auto">
-                            <div class="contact-box">
-                                <i class="fas fa-credit-card"></i>
-                                <h3 class="mt-3">IBAN</h3>
-                                <p>{!! $contact->bank !!}</p>
                             </div>
                         </div>
                     </div>

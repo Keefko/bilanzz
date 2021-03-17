@@ -20,7 +20,21 @@ class PageController extends Controller
         $this->validate($request, [
             'title' => 'required'
         ]);
-        Page::create($request->all());
+
+        $page = new Page();
+        $page->title = $request->input('title');
+        $page->slug = str_replace(" ", '-', strtolower($request->input('title')));
+        $page->text = $request->input('text');
+
+        if($request->hasFile('img')){
+            $file = $request->file('img');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('images/', $filename);
+            $page->img = $filename;
+        }
+
+        $page->save();
         return redirect()->back()->with('success', 'Stránka bola úspešne vytvorená');
     }
 
@@ -31,7 +45,18 @@ class PageController extends Controller
         ]);
 
         $page = Page::findOrFail($id);
-        $page->update($request->all());
+        $page->title = $request->input('title');
+        $page->slug = str_replace(" ", '-', $request->input('title'));
+        $page->text = $request->input('text');
+
+
+        if($request->hasFile('img')){
+            $file = $request->file('img');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('images/', $filename);
+            $page->img = $filename;
+        }
 
         return redirect()->back()->with('success', 'Stránka bola úspešne aktualizovaná');
     }

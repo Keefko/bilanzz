@@ -17,4 +17,6 @@ class Page extends Model
     private $title;
     private $text;
     private $slug;
+
+    protected $fillable = ['title', 'img', 'text', 'slug'];
 }

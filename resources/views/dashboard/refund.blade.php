@@ -1,5 +1,5 @@
 @extends('admin')
-@section('title','Administrácia |Úvodná stránka')
+@section('title','Administrácia | Kalkulačka')
 
 @section('content')
     @include('dashboard.includes.menu')
@@ -44,7 +44,7 @@
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
                                                     {{ \Collective\Html\FormFacade::label('text', 'Text', ['class' => 'form-control-label']) }}
-                                                    {{ \Collective\Html\FormFacade::textarea('text', $section->text, ['class' => 'description form-control']) }}
+                                                    {{ \Collective\Html\FormFacade::textarea('text', $section->text, ['class' => 'form-control']) }}
                                                 </div>
                                             </div>
 
@@ -57,24 +57,20 @@
                                                     {{ \Collective\Html\FormFacade::label('button_one_url', '1. Tlačitko url', ['class' => 'form-control-label']) }}
                                                     {{ \Collective\Html\FormFacade::text('button_one_url', $section->button_one_url, ['class' => 'form-control mt-3']) }}
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
                                                     {{ \Collective\Html\FormFacade::label('button_two_text', '2. Tlačitko text', ['class' => 'form-control-label']) }}
                                                     {{ \Collective\Html\FormFacade::text('button_two_text', $section->button_two_text, ['class' => 'form-control mt-3']) }}
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
                                                     {{ \Collective\Html\FormFacade::label('button_two_url', '2. Tlačitko url', ['class' => 'form-control-label']) }}
                                                     {{ \Collective\Html\FormFacade::text('button_two_url', $section->button_two_url, ['class' => 'form-control mt-3']) }}
                                                 </div>
                                             </div>
 
-                                        </div>
-                                            <button type="submit" class="btn-custom btn-custom-blue-admin mt-2 mb-2">Upraviť sekciu</button>
 
-                                            {!! \Collective\Html\FormFacade::close() !!}
+                                            <button type="submit" class="btn btn-custom btn-custom-grey-full mt-2 mb-2">Upraviť sekciu</button>
+                                        </div>
+                                        {!! \Collective\Html\FormFacade::close() !!}
 
                                     </div>
                                 </td>
@@ -86,5 +82,5 @@
             </div>
         </div>
     </div>
-@include('dashboard.includes.end')
+    @include('dashboard.includes.end')
 @endsection

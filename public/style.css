@@ -45,6 +45,8 @@ a:hover {
     text-decoration: none;
 }
 
+
+
 .btn-custom {
     font-size: 18px;
     font-weight: bold;
@@ -52,6 +54,18 @@ a:hover {
     border-radius: 0;
     transition: all 1s ease ;
     cursor: pointer;
+}
+
+.btn-ask {
+    background-color: var(--main);
+    color: white;
+    font-weight: bold;
+    transition: all 0.6s ease;
+}
+
+.btn-ask:hover {
+    background-color: var(--darkblue);
+    color: white;
 }
 
 .btn-custom-blue {
@@ -71,6 +85,7 @@ a:hover {
     border-radius: 8px;
     color: var(--main);
     transition: all 0.7s ease;
+    font-weight: bold;
 }
 
 .btn-custom-blue-border:hover {
@@ -78,6 +93,28 @@ a:hover {
     background-color: var(--main);
     box-sizing: border-box;
     border-radius: 8px;
+    color: white;
+}
+
+.btn-custom-blue-admin {
+    border: 2px solid var(--main);
+    color: var(--main);
+    background: transparent;
+}
+
+.btn-custom-blue-admin:hover {
+    background: var(--main);
+    color: white;
+}
+
+.btn-custom-delete {
+    border: 2px solid red;
+    background: transparent;
+    color: red;
+}
+
+.btn-custom-delete:hover {
+    background: red;
     color: white;
 }
 
@@ -90,7 +127,9 @@ a:hover {
     color: white;
 }
 
-
+.hiddenRow {
+    padding: 0 !important;
+}
 
 /* Navbar */
 #navbar{
@@ -115,20 +154,29 @@ a:hover {
 }
 
 #navbar .nav-item .nav-link{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    transition: all 0.8s ease;
+    line-height: 20px;
+    padding: 15px;
+    margin: 10px;
+    transition: all 0.3s cubic-bezier(0.7,1,0.7,1);
 }
 
 #navbar ul > li a {
     color: var(--heading);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
 }
 
 #navbar ul > li a:hover,
 #navbar ul > li a.active{
+    border: 2px solid var(--main);
     color: var(--main);
 }
+
+
+
 
 .navbar-toggler,
 .navbar-toggler:focus,
@@ -200,20 +248,83 @@ button.navbar-toggler{
     transform: rotate(-90deg);
 }
 
-#navbar .dropdown ul{
-    border-radius: 0.2rem;
-    padding-right: 0;
+@media all and (min-width: 992px) {
+    #navbar .nav-item .dropdown-menu{
+        display:block;
+        opacity: 0;
+        visibility: hidden;
+        transition:.3s;
+        margin-top:0;
+        border: 1px solid var(--lightgrey);
+        border-width: 0px 1px 1px 1px;
+    }
+    #navbar .dropdown-menu.fade-down{
+        top:70%;
+        transform: rotateX(-65deg);
+        transform-origin: 0% 0%;
+    }
+    #navbar .dropdown-menu.fade-up{
+        top:160%;
+    }
+
+    #navbar .nav-item:hover .dropdown-menu{
+        transition: .3s;
+        opacity:1;
+        visibility:visible;
+        top:100%;
+        transform: rotateX(0deg);
+    }
 }
 
-#navbar .dropdown ul li a {
-    padding: 8px;
+#navbar .dropdown-menu li a {
     color: var(--heading);
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+#navbar .dropdown-menu li a:hover {
+    color: var(--main);
+    border: none;
+    background: transparent;
 }
 
-#navbar .dropdown ul li a:hover {
-    background-color: var(--main);
-    color: white;
+.offcanvas-header{ display:none; }
+
+@media (max-width: 992px) {
+    .offcanvas-header{ display:block; }
+    .navbar-collapse {
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: white;
+        transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    }
+    .navbar-collapse.show {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
 }
+
+/*#navbar .dropdown ul{*/
+/*    border-radius: 0.2rem;*/
+/*    padding-right: 0;*/
+/*}*/
+
+/*#navbar .dropdown ul li a {*/
+/*    padding: 8px;*/
+/*    color: var(--heading);*/
+/*}*/
+
+/*#navbar .dropdown ul li a:hover {*/
+/*    background-color: var(--main);*/
+/*    color: white;*/
+/*}*/
 
 
 /* header */
@@ -428,22 +539,11 @@ footer {
     padding-bottom: 30px;
     color: white;
 }
+@media all and (min-width: 600px){
+    footer .copyright{
+        text-align: right;
+    }
 
-footer i.fab {
-    display: inline-block;
-    border-radius: 60px;
-    background-color: #194673;
-    padding: 0.5em 0.6em;
-    margin-left: 6px;
-}
-
-footer i.fab:hover {
-    background-color: var(--main);
-    cursor: pointer;
-}
-
-footer i::before{
-    color: white;
 }
 
 /* page */
@@ -900,11 +1000,28 @@ form .btn-user {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+
+
+.table td {
+    vertical-align: middle;
+}
+
+.table td a{
+    color: var(--main);
+    text-decoration: none;
+}
+
+.table td a:hover{
+    color: var(--darkblue);
+}
+
 label{
     font-weight: bold;
 }
 
-input,
+input[type='text'],
+input[type='password'],
+input[type='file'],
 textarea {
     padding: 10px 8px 10px 8px;
     border: 1px solid lightgrey;
@@ -918,7 +1035,9 @@ textarea {
     letter-spacing: 1px
 }
 
-input:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='file']:focus,
 textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
@@ -983,4 +1102,45 @@ textarea:focus {
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+.mce-notification-warning {
+    display: none !important;
+}
+
+
+/* modal */
+
+.modal-content{
+    background: var(--lightgrey);
+    color: var(--heading);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    #contact .contact-box h3{
+        font-size: 26px;
+    }
+
+    #contact .contact-box p{
+        font-size: 14px;
+    }
+
+    #services .heading h1,
+    #prices .heading h1,
+    #contact .heading h1,
+    #others .heading h1,
+    #journey .heading h1{
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    #page-hero .masthead h1{
+        font-size: 46px;
+        line-height: 70px;
+        margin-left: 30px;
+    }
+
 }

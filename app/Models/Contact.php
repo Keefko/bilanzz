@@ -19,8 +19,6 @@ class Contact extends Model
     private $address;
     private $phone;
     private $mail;
-    private $bank;
-    private $info;
     private $map;
 
     public function faqs(){

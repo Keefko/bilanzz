@@ -14,4 +14,6 @@ class Journey extends Model
 
     private $title;
     private $text;
+
+    protected $fillable = ['title','text'];
 }

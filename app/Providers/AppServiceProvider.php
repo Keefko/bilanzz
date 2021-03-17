@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Image;
 use App\Models\Journey;
 use App\Models\Menu;
 use App\Models\Refund;
@@ -59,6 +60,13 @@ class AppServiceProvider extends ServiceProvider
                 ->with('section', Refund::all());
         });
 
+        view()->composer('includes.menu', function($view){
+           $view->with('logo', Image::findOrFail(1));
+        });
+
+        view()->composer('includes.footer', function($view){
+            $view->with('logo', Image::findOrFail(2));
+        });
 
     }
 }

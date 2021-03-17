@@ -3,10 +3,12 @@
         <img class="sidebar-heading" src="{{asset('images/logobilanz.svg')}}">
         <div class="list-group list-group-flush">
             <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Administrácia</a>
-            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Domovská stránka</a>
-            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Služby</a>
-            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Stránky</a>
-            <a href="{{url('/administracia')}}" class="list-group-item list-group-item-action">Menu</a>
+            <a href="{{url('/administracia/sekcie')}}" class="list-group-item list-group-item-action">Domovská stránka</a>
+            <a href="{{url('/administracia/sluzby')}}" class="list-group-item list-group-item-action">Služby</a>
+            <a href="{{url('/administracia/stranky')}}" class="list-group-item list-group-item-action">Stránky</a>
+            <a href="{{url('/administracia/menu')}}" class="list-group-item list-group-item-action">Menu</a>
+            <a href="{{url('/administracia/kalkulacka')}}" class="list-group-item list-group-item-action">Kalkulacka</a>
+            <a href="{{url('/administracia/cesta')}}" class="list-group-item list-group-item-action">Postup</a>
             <a href="{{url('/administracia/kontakt')}}" class="list-group-item list-group-item-action">Kontakt</a>
         </div>
     </div>
